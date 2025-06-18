@@ -1,4 +1,5 @@
 import StartScreen from './screens/StartScreen'
+import LevelSelectScreen from './screens/LevelSelectScreen'
 import { useGameState } from './state/gameState'
 
 function App() {
@@ -6,6 +7,10 @@ function App() {
 
   if (currentScreen === 'start') {
     return <StartScreen />
+  }
+
+  if (currentScreen === 'levelSelect') {
+    return <LevelSelectScreen />
   }
 
   return null

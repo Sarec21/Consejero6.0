@@ -1,5 +1,16 @@
 {
   "welcome": "Bienvenido",
   "game_title": "El Consejero",
-  "start_game": "Comenzar juego"
+  "start_game": "Comenzar juego",
+  "select_level": "Selecciona tu nivel inicial",
+  "level_village": "Aldea",
+  "level_village_description": "Comienza tu aventura en una pequeña aldea.",
+  "level_governor": "Gobernador",
+  "level_governor_description": "Empieza como un gobernador local a cargo de una provincia.",
+  "level_royal": "Corte Real",
+  "level_royal_description": "Sirve en la corte real desde el principio.",
+  "level_mythical": "Reino Mitológico",
+  "level_mythical_description": "Entra en el reino de los mitos y las leyendas.",
+  "level_oracle": "Oráculo Legendario",
+  "level_oracle_description": "Busca sabiduría en el oráculo legendario."
 }

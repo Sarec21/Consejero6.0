@@ -14,6 +14,7 @@ export interface GameState {
     reputation: number
   }
   currentScreen: string
+  selectedLevel: string
   narrativeMemory: string[]
   updateVariable: (path: string, value: unknown) => void
   resetGame: () => void
@@ -33,6 +34,7 @@ const initialState = {
     reputation: 50,
   },
   currentScreen: 'start',
+  selectedLevel: '',
   narrativeMemory: [] as string[],
 }
 

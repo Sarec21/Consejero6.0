@@ -1,5 +1,16 @@
 {
   "welcome": "Welcome",
   "game_title": "The Advisor",
-  "start_game": "Start Game"
+  "start_game": "Start Game",
+  "select_level": "Select Your Starting Level",
+  "level_village": "Village",
+  "level_village_description": "Start your adventure in a small village.",
+  "level_governor": "Governor",
+  "level_governor_description": "Begin as a local governor in charge of a province.",
+  "level_royal": "Royal Court",
+  "level_royal_description": "Serve at the royal court from the start.",
+  "level_mythical": "Mythical Realm",
+  "level_mythical_description": "Enter the realm of myths and legends.",
+  "level_oracle": "Legendary Oracle",
+  "level_oracle_description": "Seek wisdom from the legendary oracle."
 }
