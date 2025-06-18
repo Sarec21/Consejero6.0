@@ -25,5 +25,8 @@
   "final_description": "El final de tu viaje",
   "card_unlocked": "Carta desbloqueada",
   "achievement_unlocked": "Logro obtenido",
-  "play_again": "Jugar otra vez"
+  "play_again": "Jugar otra vez",
+  "profile_title": "Tu Perfil",
+  "profile_placeholder": "Las cartas y logros desbloqueados se mostrarán aquí.",
+  "profile_button": "Perfil"
 }

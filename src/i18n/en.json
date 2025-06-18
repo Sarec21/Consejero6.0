@@ -25,5 +25,8 @@
   "final_description": "The end of your journey",
   "card_unlocked": "New Card Unlocked",
   "achievement_unlocked": "Achievement Unlocked",
-  "play_again": "Play Again"
+  "play_again": "Play Again",
+  "profile_title": "Your Profile",
+  "profile_placeholder": "Unlocked cards and achievements will appear here.",
+  "profile_button": "Profile"
 }
