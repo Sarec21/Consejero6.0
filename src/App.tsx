@@ -3,6 +3,7 @@ import LevelSelectScreen from './screens/LevelSelectScreen'
 import PresentationScreen from './screens/PresentationScreen'
 import TurnScreen from './screens/TurnScreen'
 import ReactionScreen from './screens/ReactionScreen'
+import FinalScreen from './screens/FinalScreen'
 import { useGameState } from './state/gameState'
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
 
   if (currentScreen === 'reaction') {
     return <ReactionScreen />
+  }
+
+  if (currentScreen === 'final') {
+    return <FinalScreen />
   }
 
   return null

@@ -20,5 +20,10 @@
   "send_advice": "Send Advice",
   "king_reaction_title": "The King's Response",
   "king_emotion_placeholder": "The King looks at you with suspicion.",
-  "king_reaction_paragraph": "He listens carefully but seems unconvinced. He decides to delay his verdict."
+  "king_reaction_paragraph": "He listens carefully but seems unconvinced. He decides to delay his verdict.",
+  "final_title": "Your Fate",
+  "final_description": "The end of your journey",
+  "card_unlocked": "New Card Unlocked",
+  "achievement_unlocked": "Achievement Unlocked",
+  "play_again": "Play Again"
 }

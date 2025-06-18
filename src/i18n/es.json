@@ -20,5 +20,10 @@
   "send_advice": "Enviar consejo",
   "king_reaction_title": "La reacción del Rey",
   "king_emotion_placeholder": "El Rey te mira con desconfianza.",
-  "king_reaction_paragraph": "Te escucha con atención pero parece poco convencido. Decide aplazar su decisión."
+  "king_reaction_paragraph": "Te escucha con atención pero parece poco convencido. Decide aplazar su decisión.",
+  "final_title": "Tu destino",
+  "final_description": "El final de tu viaje",
+  "card_unlocked": "Carta desbloqueada",
+  "achievement_unlocked": "Logro obtenido",
+  "play_again": "Jugar otra vez"
 }
