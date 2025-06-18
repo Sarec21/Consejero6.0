@@ -43,15 +43,25 @@
 
 .start-screen {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.start-screen .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
 }
 
 .start-screen h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .start-screen button {
