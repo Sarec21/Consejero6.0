@@ -17,5 +17,8 @@
   "continue": "Continuar",
   "your_advice_title": "¿Qué aconsejas al Rey?",
   "your_advice_label": "Tu consejo",
-  "send_advice": "Enviar consejo"
+  "send_advice": "Enviar consejo",
+  "king_reaction_title": "La reacción del Rey",
+  "king_emotion_placeholder": "El Rey te mira con desconfianza.",
+  "king_reaction_paragraph": "Te escucha con atención pero parece poco convencido. Decide aplazar su decisión."
 }
