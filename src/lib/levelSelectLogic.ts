@@ -17,5 +17,5 @@ export const levelOptions: LevelOption[] = [
 export function selectLevel(level: string) {
   const state = useGameState.getState()
   state.updateVariable('selectedLevel', level)
-  state.updateVariable('currentScreen', 'presentacionRey')
+  state.updateVariable('currentScreen', 'presentation')
 }
