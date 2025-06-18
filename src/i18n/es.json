@@ -14,5 +14,8 @@
   "level_oracle": "Oráculo Legendario",
   "level_oracle_description": "Busca sabiduría en el oráculo legendario.",
   "presentation_title": "Tu papel comienza ahora...",
-  "continue": "Continuar"
+  "continue": "Continuar",
+  "your_advice_title": "¿Qué aconsejas al Rey?",
+  "your_advice_label": "Tu consejo",
+  "send_advice": "Enviar consejo"
 }

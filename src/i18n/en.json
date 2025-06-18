@@ -14,5 +14,8 @@
   "level_oracle": "Legendary Oracle",
   "level_oracle_description": "Seek wisdom from the legendary oracle.",
   "presentation_title": "Your role begins now...",
-  "continue": "Continue"
+  "continue": "Continue",
+  "your_advice_title": "What do you advise the King?",
+  "your_advice_label": "Your advice",
+  "send_advice": "Send Advice"
 }

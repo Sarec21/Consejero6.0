@@ -5,7 +5,7 @@ export default function PresentationScreen() {
   const { t } = useTranslation()
 
   const continueToGame = () => {
-    useGameState.getState().updateVariable('currentScreen', 'firstTurn')
+    useGameState.getState().updateVariable('currentScreen', 'turn')
   }
 
   return (
