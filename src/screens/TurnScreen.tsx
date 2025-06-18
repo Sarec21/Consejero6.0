@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useGameState } from '../state/gameState'
+import { sendAdviceToGPT } from '../lib/sendAdviceToGPT'
 
 export default function TurnScreen() {
   const { t } = useTranslation()
   const [advice, setAdvice] = useState('')
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!advice.trim()) return
     const state = useGameState.getState()
     state.setCurrentAdvice(advice.trim())
-    state.updateVariable('currentScreen', 'reaction')
+    await sendAdviceToGPT(advice.trim())
   }
 
   return (
