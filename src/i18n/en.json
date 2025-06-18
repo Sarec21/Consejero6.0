@@ -17,5 +17,8 @@
   "continue": "Continue",
   "your_advice_title": "What do you advise the King?",
   "your_advice_label": "Your advice",
-  "send_advice": "Send Advice"
+  "send_advice": "Send Advice",
+  "king_reaction_title": "The King's Response",
+  "king_emotion_placeholder": "The King looks at you with suspicion.",
+  "king_reaction_paragraph": "He listens carefully but seems unconvinced. He decides to delay his verdict."
 }
