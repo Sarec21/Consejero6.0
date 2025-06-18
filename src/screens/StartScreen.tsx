@@ -5,11 +5,11 @@ export default function StartScreen() {
   const { t } = useTranslation()
 
   return (
-    <div className="start-screen">
+    <main className="start-screen">
       <div className="content">
         <h1 className="title">{t('game_title')}</h1>
         <button onClick={goToLevelSelect}>{t('start_game')}</button>
       </div>
-    </div>
+    </main>
   )
 }
