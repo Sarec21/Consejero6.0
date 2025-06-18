@@ -3,6 +3,7 @@ import { useGameState } from '../state/gameState'
 
 export default function PresentationScreen() {
   const { t } = useTranslation()
+  const update = useGameState((state) => state.updateVariable)
 
   const continueToGame = () => {
     useGameState.getState().updateVariable('currentScreen', 'turn')
@@ -10,6 +11,7 @@ export default function PresentationScreen() {
 
   return (
     <main className="presentation-screen">
+      <button className="pause-button" onClick={() => update('currentScreen', 'pause')}>⚙️</button>
       <h2 className="title">{t('presentation_title')}</h2>
       <div className="king-info">
         <p><strong>Ulric</strong>, the Raven</p>

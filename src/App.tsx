@@ -5,6 +5,7 @@ import TurnScreen from './screens/TurnScreen'
 import ReactionScreen from './screens/ReactionScreen'
 import FinalScreen from './screens/FinalScreen'
 import ProfileScreen from './screens/ProfileScreen'
+import PauseMenu from './screens/PauseMenu'
 import { useGameState } from './state/gameState'
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
 
   if (currentScreen === 'reaction') {
     return <ReactionScreen />
+  }
+
+  if (currentScreen === 'pause') {
+    return <PauseMenu />
   }
 
   if (currentScreen === 'profile') {
