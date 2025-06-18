@@ -1,34 +1,57 @@
 import { useState } from 'react'
 import { useGameState } from '../state/gameState'
 
-declare const process: { env: Record<string, string | undefined> }
-
 export default function PauseMenu() {
+  const currentScreen = useGameState((state) => state.currentScreen)
   const update = useGameState((state) => state.updateVariable)
   const gameState = useGameState((state) => state)
-  const [showDebug, setShowDebug] = useState(
-    process.env.DEBUG_MODE === 'true' || import.meta.env.DEBUG_MODE === 'true'
-  )
+  const [isOpen, setIsOpen] = useState(false)
+
+  if (currentScreen === 'start' || currentScreen === 'profile') {
+    return null
+  }
+
+  const toggleMenu = () => setIsOpen((v) => !v)
 
   return (
-    <main className="pause-menu">
-      <h2 className="title">Pause Menu</h2>
-      <div className="options">
-        <button onClick={() => update('currentScreen', 'start')}>
-          Return to Main Menu
-        </button>
-        <button onClick={() => update('currentScreen', 'profile')}>
-          View Profile
-        </button>
-        <button onClick={() => setShowDebug((v) => !v)}>
-          View Current Variables
-        </button>
-        {showDebug && (
-          <pre className="debug-block">
-            {JSON.stringify(gameState, null, 2)}
-          </pre>
-        )}
-      </div>
-    </main>
+    <>
+      <button className="pause-button" onClick={toggleMenu}>
+        ⚙️
+      </button>
+      <aside className={`pause-menu${isOpen ? ' open' : ''}`}>
+        <h2 className="title">Pause Menu</h2>
+        <div className="options">
+          <button
+            onClick={() => {
+              setIsOpen(false)
+              update('currentScreen', 'start')
+            }}
+          >
+            Main Menu
+          </button>
+          <button
+            onClick={() => {
+              setIsOpen(false)
+              update('currentScreen', 'profile')
+            }}
+          >
+            Profile
+          </button>
+          <div className="debug-block">
+            <h3>Debug</h3>
+            <ul>
+              <li>Happiness: {gameState.kingdom.happiness}</li>
+              <li>Wealth: {gameState.kingdom.wealth}</li>
+              <li>Food: {gameState.kingdom.food}</li>
+              <li>Army: {gameState.kingdom.army}</li>
+              <li>Prestige: {gameState.kingdom.prestige}</li>
+              <li>War: {gameState.kingdom.war ? 'Yes' : 'No'}</li>
+              <li>Advisor Trust: {gameState.advisor.trust}</li>
+              <li>Advisor Reputation: {gameState.advisor.reputation}</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </>
   )
 }
