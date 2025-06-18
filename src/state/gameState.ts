@@ -16,6 +16,8 @@ export interface GameState {
   currentScreen: string
   selectedLevel: string
   narrativeMemory: string[]
+  currentAdvice: string
+  setCurrentAdvice: (advice: string) => void
   updateVariable: (path: string, value: unknown) => void
   resetGame: () => void
 }
@@ -36,6 +38,7 @@ const initialState = {
   currentScreen: 'start',
   selectedLevel: '',
   narrativeMemory: [] as string[],
+  currentAdvice: '',
 }
 
 export const useGameState = create<GameState>((set) => ({
@@ -51,4 +54,5 @@ export const useGameState = create<GameState>((set) => ({
       return { ...state }
     }),
   resetGame: () => set(initialState),
+  setCurrentAdvice: (advice) => set({ currentAdvice: advice }),
 }))
