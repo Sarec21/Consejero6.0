@@ -12,5 +12,7 @@
   "level_mythical": "Mythical Realm",
   "level_mythical_description": "Enter the realm of myths and legends.",
   "level_oracle": "Legendary Oracle",
-  "level_oracle_description": "Seek wisdom from the legendary oracle."
+  "level_oracle_description": "Seek wisdom from the legendary oracle.",
+  "presentation_title": "Your role begins now...",
+  "continue": "Continue"
 }

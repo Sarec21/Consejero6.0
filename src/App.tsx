@@ -1,5 +1,6 @@
 import StartScreen from './screens/StartScreen'
 import LevelSelectScreen from './screens/LevelSelectScreen'
+import PresentationScreen from './screens/PresentationScreen'
 import { useGameState } from './state/gameState'
 
 function App() {
@@ -11,6 +12,10 @@ function App() {
 
   if (currentScreen === 'levelSelect') {
     return <LevelSelectScreen />
+  }
+
+  if (currentScreen === 'presentation') {
+    return <PresentationScreen />
   }
 
   return null

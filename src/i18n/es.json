@@ -12,5 +12,7 @@
   "level_mythical": "Reino Mitológico",
   "level_mythical_description": "Entra en el reino de los mitos y las leyendas.",
   "level_oracle": "Oráculo Legendario",
-  "level_oracle_description": "Busca sabiduría en el oráculo legendario."
+  "level_oracle_description": "Busca sabiduría en el oráculo legendario.",
+  "presentation_title": "Tu papel comienza ahora...",
+  "continue": "Continuar"
 }
