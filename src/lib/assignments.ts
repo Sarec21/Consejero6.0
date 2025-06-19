@@ -7,6 +7,12 @@ export function selectKingForPlot(plotId: string): King {
   return KINGS[0]
 }
 
+export function selectKingdomForPlot(plotId: string): Kingdom {
+  if (plotId === 'moral_decay') return KINGDOMS.find(k => k.id === 'moral_decay') || KINGDOMS[0]
+  if (plotId === 'rise_of_war') return KINGDOMS.find(k => k.id === 'rise_of_war') || KINGDOMS[0]
+  return KINGDOMS[0]
+}
+
 export function selectKingdomAndKingForLevel(level: string): { kingdom: Kingdom; king: King } {
   const availableKingdoms = KINGDOMS.filter(k => k.levels_available.includes(level))
   const kingdom =
