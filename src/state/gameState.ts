@@ -4,14 +4,7 @@ import type { King } from '../data/kings'
 import type { Kingdom } from '../data/kingdoms'
 
 export interface GameState {
-  kingdom: {
-    happiness: number
-    wealth: number
-    food: number
-    army: number
-    prestige: number
-    war: boolean
-  }
+  kingdom: Kingdom | null
   advisor: {
     trust: number
     reputation: number
@@ -32,14 +25,7 @@ export interface GameState {
 }
 
 const initialState = {
-  kingdom: {
-    happiness: 50,
-    wealth: 50,
-    food: 50,
-    army: 50,
-    prestige: 0,
-    war: false,
-  },
+  kingdom: null as Kingdom | null,
   advisor: {
     trust: 50,
     reputation: 50,
@@ -89,12 +75,12 @@ export const gameState = {
 }
 
 export function initializeGameWithPlot(plot: MainPlot) {
-  const king = selectKingForPlot(plot.id)
-  const kingdom = selectKingdomForPlot(plot.id)
+  const selectedKing = selectKingForPlot(plot.id)
+  const selectedKingdom = selectKingdomForPlot(plot.id)
   gameState.level = plot.level
   gameState.mainPlotId = plot.id
-  gameState.king = king
-  gameState.kingdom = kingdom
+  gameState.king = selectedKing
+  gameState.kingdom = selectedKingdom
   gameState.advisor = plot.initialState.advisor
   gameState.turn = 1
   gameState.decisions = []

@@ -8,22 +8,7 @@ export function selectKingForPlot(plotId: string): King {
 }
 
 export function selectKingdomForPlot(plotId: string): Kingdom {
-  if (plotId === 'moral_decay') return KINGDOMS.find(k => k.id === 'moral_decay') || KINGDOMS[0]
-  if (plotId === 'rise_of_war') return KINGDOMS.find(k => k.id === 'rise_of_war') || KINGDOMS[0]
+  if (plotId === 'moral_decay') return KINGDOMS.find(k => k.id === 'eldoria') || KINGDOMS[0]
+  if (plotId === 'rise_of_war') return KINGDOMS.find(k => k.id === 'gravenrock') || KINGDOMS[0]
   return KINGDOMS[0]
-}
-
-export function selectKingdomAndKingForLevel(level: string): { kingdom: Kingdom; king: King } {
-  const availableKingdoms = KINGDOMS.filter(k => k.levels_available.includes(level))
-  const kingdom =
-    availableKingdoms[Math.floor(Math.random() * availableKingdoms.length)] || KINGDOMS[0]
-
-  const recommendedKings = KINGS.filter(k => kingdom.recommended_kings.includes(k.id))
-  let king = recommendedKings[Math.floor(Math.random() * recommendedKings.length)]
-
-  if (!king) {
-    king = KINGS.find(k => k.defaultRealmId === kingdom.id) || KINGS[0]
-  }
-
-  return { kingdom, king }
 }

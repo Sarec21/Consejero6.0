@@ -40,12 +40,8 @@ export default function PauseMenu() {
           <div className="debug-block">
             <h3>Debug</h3>
             <ul>
-              <li>Happiness: {gameState.kingdom.happiness}</li>
-              <li>Wealth: {gameState.kingdom.wealth}</li>
-              <li>Food: {gameState.kingdom.food}</li>
-              <li>Army: {gameState.kingdom.army}</li>
-              <li>Prestige: {gameState.kingdom.prestige}</li>
-              <li>War: {gameState.kingdom.war ? 'Yes' : 'No'}</li>
+              <li>Kingdom: {gameState.kingdom?.name}</li>
+              <li>Climate: {gameState.kingdom?.climate}</li>
               <li>Advisor Trust: {gameState.advisor.trust}</li>
               <li>Advisor Reputation: {gameState.advisor.reputation}</li>
             </ul>
