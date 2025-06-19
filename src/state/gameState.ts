@@ -4,6 +4,7 @@ import type { King } from '../data/kings'
 import type { Kingdom } from '../data/kingdoms'
 
 export interface GameState {
+  king: King | null
   kingdom: Kingdom | null
   advisor: {
     trust: number
@@ -25,6 +26,7 @@ export interface GameState {
 }
 
 const initialState = {
+  king: null as King | null,
   kingdom: null as Kingdom | null,
   advisor: {
     trust: 50,
@@ -86,4 +88,9 @@ export function initializeGameWithPlot(plot: MainPlot) {
   gameState.decisions = []
   gameState.reactions = []
   gameState.final = null
+
+  const update = useGameState.getState().updateVariable
+  update('king', selectedKing)
+  update('kingdom', selectedKingdom)
+  update('advisor', plot.initialState.advisor)
 }
