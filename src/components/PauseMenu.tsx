@@ -44,12 +44,9 @@ export default function PauseMenu() {
           <h3>{t('pause_menu.debug_title')}</h3>
           <h4>{t('pause_menu.kingdom')}</h4>
           <ul>
-            <li>happiness: {gameState.kingdom.happiness}</li>
-            <li>wealth: {gameState.kingdom.wealth}</li>
-            <li>food: {gameState.kingdom.food}</li>
-            <li>army: {gameState.kingdom.army}</li>
-            <li>prestige: {gameState.kingdom.prestige}</li>
-            <li>war: {gameState.kingdom.war ? 'true' : 'false'}</li>
+            <li>id: {gameState.kingdom?.id}</li>
+            <li>name: {gameState.kingdom?.name}</li>
+            <li>climate: {gameState.kingdom?.climate}</li>
           </ul>
           <h4>{t('pause_menu.advisor')}</h4>
           <ul>
