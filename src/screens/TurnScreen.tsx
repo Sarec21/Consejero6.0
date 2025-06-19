@@ -6,7 +6,6 @@ import { sendAdviceToGPT } from '../lib/sendAdviceToGPT'
 export default function TurnScreen() {
   const { t } = useTranslation()
   const [advice, setAdvice] = useState('')
-  const update = useGameState((state) => state.updateVariable)
 
   const handleSubmit = async () => {
     if (!advice.trim()) return
@@ -17,7 +16,6 @@ export default function TurnScreen() {
 
   return (
     <main className="turn-screen">
-      <button className="pause-button" onClick={() => update('currentScreen', 'pause')}>⚙️</button>
       <h2 className="title">{t('your_advice_title')}</h2>
       <section className="dilemma-block">
         <h3 className="dilemma-title">A nobleman accuses the tax collector of corruption</h3>

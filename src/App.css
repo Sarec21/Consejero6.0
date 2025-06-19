@@ -350,7 +350,7 @@
 }
 
 .pause-button {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   right: 1rem;
   width: 2.5rem;
@@ -366,6 +366,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   padding: 0;
+  z-index: 1000;
 }
 
 .pause-button:hover {
@@ -374,14 +375,25 @@
 }
 
 .pause-menu {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 300px;
+  max-width: 80vw;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   padding: 2rem 1rem;
-  min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.pause-menu.open {
+  transform: translateX(0);
 }
 
 .pause-menu .title {

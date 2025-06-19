@@ -7,43 +7,35 @@ import FinalScreen from './screens/FinalScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import PauseMenu from './screens/PauseMenu'
 import { useGameState } from './state/gameState'
+import type { ReactElement } from 'react'
 
 function App() {
   const currentScreen = useGameState((state) => state.currentScreen)
 
+  let screen: ReactElement | null = null
+
   if (currentScreen === 'start') {
-    return <StartScreen />
+    screen = <StartScreen />
+  } else if (currentScreen === 'levelSelect') {
+    screen = <LevelSelectScreen />
+  } else if (currentScreen === 'presentation') {
+    screen = <PresentationScreen />
+  } else if (currentScreen === 'turn') {
+    screen = <TurnScreen />
+  } else if (currentScreen === 'reaction') {
+    screen = <ReactionScreen />
+  } else if (currentScreen === 'profile') {
+    screen = <ProfileScreen />
+  } else if (currentScreen === 'final') {
+    screen = <FinalScreen />
   }
 
-  if (currentScreen === 'levelSelect') {
-    return <LevelSelectScreen />
-  }
-
-  if (currentScreen === 'presentation') {
-    return <PresentationScreen />
-  }
-
-  if (currentScreen === 'turn') {
-    return <TurnScreen />
-  }
-
-  if (currentScreen === 'reaction') {
-    return <ReactionScreen />
-  }
-
-  if (currentScreen === 'pause') {
-    return <PauseMenu />
-  }
-
-  if (currentScreen === 'profile') {
-    return <ProfileScreen />
-  }
-
-  if (currentScreen === 'final') {
-    return <FinalScreen />
-  }
-
-  return null
+  return (
+    <>
+      {screen}
+      <PauseMenu />
+    </>
+  )
 }
 
 export default App

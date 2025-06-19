@@ -11,7 +11,6 @@ export default function ReactionScreen() {
 
   return (
     <main className="reaction-screen">
-      <button className="pause-button" onClick={() => update('currentScreen', 'pause')}>⚙️</button>
       <h2 className="title">{t('king_reaction_title')}</h2>
 
       <div className="card">
