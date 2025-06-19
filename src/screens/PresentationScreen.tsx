@@ -3,6 +3,7 @@ import { useGameState } from '../state/gameState'
 
 export default function PresentationScreen() {
   const { t } = useTranslation()
+  const king = useGameState((state) => state.king)
 
   const continueToGame = () => {
     useGameState.getState().updateVariable('currentScreen', 'turn')
@@ -11,12 +12,17 @@ export default function PresentationScreen() {
   return (
     <main className="presentation-screen">
       <h2 className="title">{t('presentation_title')}</h2>
-      <div className="king-info">
-        <p><strong>Ulric</strong>, the Raven</p>
-        <p>Personality: paranoid and meticulous</p>
-        <p>Throne: A dark hall lit by torches, tapestries worn by time.</p>
-        <p>Quote: "I warn you: I do not tolerate failure."</p>
-      </div>
+      {king ? (
+        <div className="king-info">
+          <p>
+            <strong>King:</strong> {king.name} {king.nickname}
+          </p>
+          <p>Personality: {king.personality}</p>
+          <p>Description: {king.description}</p>
+        </div>
+      ) : (
+        <div className="king-info">Loading king...</div>
+      )}
       <div className="kingdom-info">
         <p>Context: A realm marked by betrayal and plague.</p>
       </div>
