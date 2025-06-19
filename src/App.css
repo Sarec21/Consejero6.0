@@ -386,9 +386,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 1rem;
+  background: rgba(17, 24, 39, 0.95);
+  color: #fff;
+  overflow-y: auto;
   z-index: 999;
 }
 
