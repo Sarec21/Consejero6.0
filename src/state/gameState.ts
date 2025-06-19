@@ -1,6 +1,7 @@
 import { create } from 'zustand'
-import { selectKingdomAndKingForLevel } from '../lib/assignments'
+import { selectKingForPlot, selectKingdomForPlot } from '../lib/assignments'
 import type { King } from '../data/kings'
+import type { Kingdom } from '../data/kingdoms'
 
 export interface GameState {
   kingdom: {
@@ -78,7 +79,7 @@ export interface MainPlot {
 export const gameState = {
   level: '',
   king: null as King | null,
-  kingdom: null as Record<string, unknown> | null,
+  kingdom: null as Kingdom | null,
   advisor: null as Record<string, unknown> | null,
   mainPlotId: '',
   turn: 1,
@@ -88,11 +89,12 @@ export const gameState = {
 }
 
 export function initializeGameWithPlot(plot: MainPlot) {
-  const { kingdom, king } = selectKingdomAndKingForLevel(plot.level)
+  const king = selectKingForPlot(plot.id)
+  const kingdom = selectKingdomForPlot(plot.id)
   gameState.level = plot.level
   gameState.mainPlotId = plot.id
   gameState.king = king
-  gameState.kingdom = { ...kingdom, ...plot.initialState.kingdom }
+  gameState.kingdom = kingdom
   gameState.advisor = plot.initialState.advisor
   gameState.turn = 1
   gameState.decisions = []
