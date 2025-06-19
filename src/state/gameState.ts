@@ -1,4 +1,6 @@
 import { create } from 'zustand'
+import { selectKingForPlot } from '../lib/assignments'
+import type { King } from '../data/kings'
 
 export interface GameState {
   kingdom: {
@@ -75,7 +77,7 @@ export interface MainPlot {
 
 export const gameState = {
   level: '',
-  king: null as Record<string, unknown> | null,
+  king: null as King | null,
   kingdom: null as Record<string, unknown> | null,
   advisor: null as Record<string, unknown> | null,
   mainPlotId: '',
@@ -86,9 +88,10 @@ export const gameState = {
 }
 
 export function initializeGameWithPlot(plot: MainPlot) {
+  const selectedKing = selectKingForPlot(plot.id)
   gameState.level = plot.level
   gameState.mainPlotId = plot.id
-  gameState.king = null
+  gameState.king = selectedKing
   gameState.kingdom = plot.initialState.kingdom
   gameState.advisor = plot.initialState.advisor
   gameState.turn = 1
