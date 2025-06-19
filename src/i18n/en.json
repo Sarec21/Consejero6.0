@@ -28,5 +28,13 @@
   "play_again": "Play Again",
   "profile_title": "Your Profile",
   "profile_placeholder": "Unlocked cards and achievements will appear here.",
-  "profile_button": "Profile"
+  "profile_button": "Profile",
+  "pause_menu": {
+    "title": "Pause Menu",
+    "main_menu": "Return to Main Menu",
+    "profile": "View Profile",
+    "debug_title": "Debug Info",
+    "kingdom": "Kingdom Variables",
+    "advisor": "Advisor Variables"
+  }
 }

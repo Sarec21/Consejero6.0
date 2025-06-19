@@ -5,7 +5,7 @@ import TurnScreen from './screens/TurnScreen'
 import ReactionScreen from './screens/ReactionScreen'
 import FinalScreen from './screens/FinalScreen'
 import ProfileScreen from './screens/ProfileScreen'
-import PauseMenu from './screens/PauseMenu'
+import PauseMenu from './components/PauseMenu'
 import { useGameState } from './state/gameState'
 import type { ReactElement } from 'react'
 
