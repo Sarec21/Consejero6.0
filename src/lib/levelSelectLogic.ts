@@ -1,4 +1,5 @@
-import { useGameState } from '../state/gameState'
+import { useGameState, initializeGameWithPlot } from '../state/gameState'
+import { plots } from '../data/plots'
 
 export interface LevelOption {
   key: string
@@ -17,5 +18,11 @@ export const levelOptions: LevelOption[] = [
 export function selectLevel(level: string) {
   const state = useGameState.getState()
   state.updateVariable('selectedLevel', level)
+
+  const plot = plots.find((p) => p.level === level)
+  if (plot) {
+    initializeGameWithPlot(plot)
+  }
+
   state.updateVariable('currentScreen', 'presentation')
 }
